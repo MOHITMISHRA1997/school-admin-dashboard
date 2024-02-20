@@ -60,6 +60,15 @@ python manage.py runserver
 ```
 
 
+## ScreenShots
 
+
+![Screenshot from 2024-02-20 18-56-38](https://github.com/MOHITMISHRA1997/school-admin-dashboard/assets/125533299/b7b133fa-b135-4172-8dcf-dba3bb592e24)
+
+![Screenshot from 2024-02-20 18-55-13](https://github.com/MOHITMISHRA1997/school-admin-dashboard/assets/125533299/d0124760-720e-4cc8-b548-83068ac6d286)
+
+![Screenshot from 2024-02-20 18-53-13](https://github.com/MOHITMISHRA1997/school-admin-dashboard/assets/125533299/6a8e2709-079d-4277-b96e-02946f8a2467)
+
+![Screenshot from 2024-02-20 18-52-13](https://github.com/MOHITMISHRA1997/school-admin-dashboard/assets/125533299/7b799ecf-15e1-4652-88aa-bae340966cba)
 
 
