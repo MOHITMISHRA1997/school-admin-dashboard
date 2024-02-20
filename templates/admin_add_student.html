@@ -1,0 +1,99 @@
+{% extends 'adminbase.html' %}
+
+
+{% block content %}
+
+<head>
+    <style media="screen">
+      a:link {
+        text-decoration: none;
+      }
+  
+      .note {
+        text-align: center;
+        height: 80px;
+        background: -webkit-linear-gradient(left, #0072ff, #8811c5);
+        color: #fff;
+        font-weight: bold;
+        line-height: 80px;
+      }
+  
+      .form-content {
+        padding: 5%;
+        border: 1px solid #ced4da;
+        margin-bottom: 2%;
+      }
+  
+      .form-control {
+        border-radius: 1.5rem;
+      }
+  
+      .btnSubmit {
+        border: none;
+        border-radius: 1.5rem;
+        padding: 1%;
+        width: 20%;
+        cursor: pointer;
+        background: #0062cc;
+        color: #fff;
+      }
+    </style>
+  
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  
+  </head>
+  
+  <!------ signup page for teacher by admin(sumit)  ---------->  
+    <div class="container px-4 py-1 px-md-5 text-center  text-lg-start my-0"><div class="row gx-lg-5 align-items-center mb-1" style="display: flex; justify-content: center; align-items: center; min-height: 100vh;">
+
+      <div class="col-lg-6 mb-5 mb-lg-0 position-relative">
+        <div id="radius-shape-1" class="position-absolute rounded-circle shadow-5-strong"></div>
+        <div id="radius-shape-2" class="position-absolute shadow-5-strong"></div>
+    
+        <div class="card bg-glass">
+          <h3 class="mt-4">Add Student</h3>
+          <div class="card-body px-4 py-5 px-md-5">
+            <form method="post">
+              <!-- 2 column grid layout with text inputs for the first and last names -->
+              <div class="row">
+                {% csrf_token %}
+                {% for fm in form1 %}
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    {{ fm.label_tag }} {{ fm }} <small class="text-danger">{{ fm.errors|striptags }}</small>
+                  </div>
+                </div>
+                {% endfor %}
+                {% for fm in form2 %}
+                <div class="col-md-6 mb-4">
+                  <div class="form-outline">
+                    {{ fm.label_tag }} {{ fm }} <small class="text-danger">{{ fm.errors|striptags }}</small>
+                  </div>
+                </div>
+                {% endfor %}
+              </div>
+    
+              {% if form.non_field_errors %}
+              {% for error in form.non_field_errors %}
+              <p class="alert alert-danger my-3">{{ error }}</p>
+              {% endfor %}
+              {% endif %}
+    
+              <!-- Submit button -->
+              <button type="submit" class="btn btn-primary btn-block mb-4">
+                Add Student
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    </div>
+  </section>
+  <!-- Section: Design Block -->
+</div>
+
+{% endblock content %}

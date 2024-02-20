@@ -1,0 +1,69 @@
+{% extends 'basic.html' %}
+{% block title %}School Auth{% endblock title %}
+{% block content %}
+<div class="container ">
+    <div class="row flex justify-content-center">
+        <div class="mb-4 col-md-3 mx-4 text-center text-xl-start px-md-8 px-lg-19 px-xl-0">
+            <!-- Caption -->
+            <h1 class="display-5 fw-bold mb-3 ls-sm">
+                <span class="text-primary">Are you</span>, a
+                Admin?
+            </h1>
+            <p class="mb-6 lead pe-lg-6">
+                Suitable for Educational Web, LMS, Training Center,
+                Courses Hub, Online Course, College, Academy,
+                University, School.
+            </p>
+            <!-- List -->
+            <a href="{% url 'adminlogin' %}" class="btn btn-dark"  title="Buy Geeks">
+                <i class="bi bi-cart-check-fill me-2"></i>Login
+            </a>
+            <a href="{% url 'adminsignup' %}" class="btn btn-outline-white ms-2" title="Geeks Preview">
+                Signup<i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+
+        <div class="mb-4 col-md-3 text-center mx-4 text-xl-start px-md-8 px-lg-19 px-xl-0">
+            <!-- Caption -->
+            <h1 class="display-5 fw-bold mb-3 ls-sm">
+                <span class="text-primary">Are you</span>, a
+                Teacher?
+            </h1>
+            <p class="mb-6 lead pe-lg-6">
+                Suitable for Educational Web, LMS, Training Center,
+                Courses Hub, Online Course, College, Academy,
+                University, School.
+            </p>
+            <!-- List -->
+            <a href="{% url 'teacherlogin' %}" class="btn btn-dark"  title="Buy Geeks">
+                <i class="bi bi-cart-check-fill me-2"></i>Login
+            </a>
+            <a href="{% url 'teachersignup' %}" class="btn btn-outline-white ms-2" title="Geeks Preview">
+                Signup<i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+
+        <div class="mb-4 col-md-3 text-center mx-4 text-xl-start px-md-8 px-lg-19 px-xl-0">
+            <!-- Caption -->
+            <h1 class="display-5 fw-bold mb-3 ls-sm">
+                <span class="text-primary">Are you</span>, a
+                Student?
+            </h1>
+            <p class="mb-6 lead pe-lg-6">
+                Suitable for Educational Web, LMS, Training Center,
+                Courses Hub, Online Course, College, Academy,
+                University, School.
+            </p>
+            <!-- List -->
+            <a href="{% url 'studentlogin' %}" class="btn btn-dark"  title="Buy Geeks">
+                <i class="bi bi-cart-check-fill me-2"></i>Login
+            </a>
+            <a href="{% url 'studentsignup' %}" class="btn btn-outline-white ms-2" title="Geeks Preview">
+                Signup<i class="bi bi-box-arrow-up-right ms-2"></i>
+            </a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock content%}
